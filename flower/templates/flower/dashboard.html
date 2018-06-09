@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>FlowerReminder</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">FlowerReminder</a></h1>
+        </div>
+    <ul>
+        {% for flower in flowers %}
+            <li>{{ flower.name}}</li>
+        {% endfor %}
+    </ul>
+    </body>
+</html>
