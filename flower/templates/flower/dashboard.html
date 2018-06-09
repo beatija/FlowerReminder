@@ -1,3 +1,4 @@
+{% load flowers %}
 <html>
     <head>
         <title>FlowerReminder</title>
@@ -9,6 +10,9 @@
     <ul>
         {% for flower in flowers %}
             <li>{{ flower.name}}</li>
+            {% for reminder in flower.reminders.all %}
+                <div>{{ reminder.pub_date }} {{ reminder.how_often|humanise }}</div>
+            {% endfor %}
         {% endfor %}
     </ul>
     </body>

@@ -15,4 +15,4 @@ class Reminder(models.Model):
         choices = REMINDER)
     pub_date = models.DateTimeField('date published')
 
-    flower = ForeignKey(Flower, on_delete=models.CASCADE)
+    flower = models.ForeignKey(Flower, on_delete=models.CASCADE, related_name='reminders')
